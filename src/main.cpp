@@ -3,10 +3,10 @@
 
 
 int main(){
- //	getDeviceInfo();
+ 	getDeviceInfo();
  //	testVecAdd();
  //	testMallocManager();
- 	testMatMul();
+//	testMatMul();
 
  	return 0;
  }

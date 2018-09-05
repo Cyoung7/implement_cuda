@@ -4,7 +4,7 @@
 
 // Thread block size
 #define BLOCK_SIZE 16
-using namespace std;
+//using namespace std;
 
 // Matrices are stored in row-major order:
 // M(row, col) = *(M.elements + row * M.stride + col)

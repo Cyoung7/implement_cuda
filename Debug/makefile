@@ -17,19 +17,19 @@ RM := rm
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: third
+all: implement_cuda
 
 # Tool invocations
-third: $(OBJS) $(USER_OBJS)
+implement_cuda: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: NVCC linker'
-	/usr/local/cuda/bin/nvcc --cudart=static -ccbin g++ -gencode arch=compute_30,code=sm_30 -gencode arch=compute_30,code=compute_30 -o "third" $(OBJS) $(USER_OBJS) $(LIBS)
+	/usr/local/cuda/bin/nvcc --cudart=static -ccbin g++ -gencode arch=compute_30,code=sm_30 -gencode arch=compute_30,code=compute_30 -o "implement_cuda" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(EXECUTABLES)$(OBJS) third
+	-$(RM) $(EXECUTABLES)$(OBJS) implement_cuda
 	-@echo ' '
 
 .PHONY: all clean dependents

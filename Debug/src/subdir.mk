@@ -20,16 +20,16 @@ OBJS += \
 src/%.o: ../src/%.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: NVCC Compiler'
-	/usr/local/cuda/bin/nvcc -I"/usr/local/cuda-9.0/samples/1_Utilities" -I"/usr/local/cuda-9.0/samples/common/inc" -I"/home/cyoung/workspace/third" --device-debug --debug -gencode arch=compute_30,code=sm_30 -gencode arch=compute_30,code=compute_30 -ccbin g++ -c -o "$@" "$<"
+	/usr/local/cuda/bin/nvcc -I"/usr/local/cuda-9.0/samples/1_Utilities" -I"/usr/local/cuda-9.0/samples/common/inc" --device-debug --debug -gencode arch=compute_30,code=sm_30 -gencode arch=compute_30,code=compute_30 -ccbin g++ -c -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-src/main.o: /usr/include/stdc-predef.h /home/cyoung/workspace/third/src/include/vecadd.h /home/cyoung/workspace/third/src/include/matmul.h
+src/main.o: /usr/include/stdc-predef.h /home/cyoung/workspace/implement_cuda/src/include/vecadd.h /home/cyoung/workspace/implement_cuda/src/include/matmul.h
 
 src/%.o: ../src/%.cu
 	@echo 'Building file: $<'
 	@echo 'Invoking: NVCC Compiler'
-	/usr/local/cuda/bin/nvcc -I"/usr/local/cuda-9.0/samples/1_Utilities" -I"/usr/local/cuda-9.0/samples/common/inc" -I"/home/cyoung/workspace/third" --device-debug --debug -gencode arch=compute_30,code=sm_30 -gencode arch=compute_30,code=compute_30 -ccbin g++ -c -o "$@" "$<"
+	/usr/local/cuda/bin/nvcc -I"/usr/local/cuda-9.0/samples/1_Utilities" -I"/usr/local/cuda-9.0/samples/common/inc" --device-debug --debug -gencode arch=compute_30,code=sm_30 -gencode arch=compute_30,code=compute_30 -ccbin g++ -c -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
