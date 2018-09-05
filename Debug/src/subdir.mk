@@ -24,7 +24,7 @@ src/%.o: ../src/%.cpp
 	@echo 'Finished building: $<'
 	@echo ' '
 
-src/main.o: /usr/include/stdc-predef.h /home/cyoung/workspace/implement_cuda/src/include/vecadd.h /home/cyoung/workspace/implement_cuda/src/include/matmul.h
+src/main.o: /usr/include/stdc-predef.h /home/cyoung/workspace/implement_cuda/src/include/vecadd.h /home/cyoung/workspace/implement_cuda/src/include/matmul.h /home/cyoung/workspace/implement_cuda/src/include/test_professional_cuda_c_programming.h
 
 src/%.o: ../src/%.cu
 	@echo 'Building file: $<'
