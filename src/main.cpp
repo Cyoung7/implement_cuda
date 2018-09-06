@@ -4,13 +4,13 @@
 
 
 int main(){
-// 	getDeviceInfo();
+ 	getDeviceInfo();
 // 	testVecAdd();
 // 	testMallocManager();
 //	testMatMul();
 
 //	professional_cuda_c_programming
-	test_professional_cuda_c_programming();
+//	test_professional_cuda_c_programming();
 
  	return 0;
  }

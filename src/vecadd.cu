@@ -8,11 +8,12 @@ void getDeviceInfo(){
 	cudaDeviceProp devProp;
 	cudaGetDeviceProperties(&devProp, dev);
 	std::cout << "使用GPU device " << dev << ": " << devProp.name << std::endl;
+//	std::cout << "SP的数量：" << devProp. << std::endl;
 	std::cout << "SM的数量：" << devProp.multiProcessorCount << std::endl;
 	std::cout << "每个线程块的共享内存大小：" << devProp.sharedMemPerBlock / 1024.0 << " KB" << std::endl;
 	std::cout << "每个线程块的最大线程数：" << devProp.maxThreadsPerBlock << std::endl;
-	std::cout << "每个EM的最大线程数：" << devProp.maxThreadsPerMultiProcessor << std::endl;
-	std::cout << "每个EM的最大线程束数：" << devProp.maxThreadsPerMultiProcessor / 32 << std::endl;
+	std::cout << "每个SM的最大线程数：" << devProp.maxThreadsPerMultiProcessor << std::endl;
+	std::cout << "每个SM的最大线程束数：" << devProp.maxThreadsPerMultiProcessor / 32 << std::endl;
 }
 // 两个向量加法kernel，grid和block均为一维
 __global__ void vecAdd(float* x, float * y, float* z, int n)
