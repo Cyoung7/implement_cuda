@@ -2,7 +2,7 @@
 
 环境:ubunut16.04 gtx1070 cuda9.0 cuDnn7.0 eclipes c++ IDE
 
-cuda入门,所有代码均来自NV docs,cuda by example,professional cuda c programming,代码添加详细注释,如有错误,请友情交流
+cuda入门,所有代码均来自[`NV docs`](https://docs.nvidia.com/cuda/),[`cuda by example`](https://developer.download.nvidia.com/books/cuda-by-example/cuda-by-example-sample.pdf),[`professional cuda c programming`](http://www.hds.bme.hu/~fhegedus/C++/Professional%20CUDA%20C%20Programming.pdf),代码添加详细注释,如有错误,请友情交流
 
 下面给出cuda小白上手指南:
 
